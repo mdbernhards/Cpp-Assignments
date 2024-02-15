@@ -1,41 +1,87 @@
 #include <iostream>
 #include <string>
-#include<fstream>
+#include <cstring>
+#include <fstream>
+#include <sstream>
 
 std::string GetFileName()
 {
-    std::string newString;
+    std::string fileName;
 
     std::cout << "Please enter file name: " << std::endl;
-    std::cin >> newString;
+    std::cin >> fileName;
 
-    return newString;
+    return fileName;
 }
 
-std::string FindFile(std::string fileName)
+std::ifstream GetFile(std::string fileName)
 {
-    std::ifstream input{fileName};
+    std::ifstream file{fileName};
+    return file;
+}
 
-    if (input) 
+bool is_empty_line(std::string line)
+{
+    for (int i = 0; i < line.length(); i++)
     {
-        while (!input.eof()) 
+        if (!(line[i] == ' ' ||  line[i] == NULL ||  line[i] == '\n'))
         {
-
+            return false;
         }
     }
-
-    return newString;
+    
+    return true;
 }
 
-std::string FormatText() {
-    std::string newString;
+std::string clean_line(std::string line)
+{
+    std::istringstream iss{ line };
+    std::string word, newLine;
 
-    return newString;
+    while (iss >> word)
+    {
+        if (newLine != "" && word != "." && word != ",")
+        {
+            newLine += " ";
+        }
+
+        newLine += word;
+    }
+
+    return newLine;
+}
+
+std::string FormatText(std::ifstream & text) 
+{
+    std::string line, formatedText;
+
+    if (text.is_open()) 
+    {
+        while (getline(text, line)) 
+        {
+            if (!is_empty_line(line)) 
+            {
+                if (formatedText != "")
+                {
+                    formatedText += "\n";
+                }
+
+                formatedText += clean_line(line);
+            }
+
+            std::cout << line << "\n";
+        }
+
+        text.close();
+    }
+
+    return formatedText;
 }
 
 std::string GetNewFileName(std::string fileName)
 {
     auto position = fileName.find('.');
+
     if (position == std::string::npos)
     {
         return fileName + ".clean";
@@ -44,38 +90,32 @@ std::string GetNewFileName(std::string fileName)
     return fileName.substr(0, position) + ".clean";
 }
 
-std::string CreateTheNewFile(std::string fileName)
+std::string CreateANewFile(std::string fileName, std::string text)
 {
-    auto position = fileName.find('.');
-    if (position == std::string::npos)
-    {
-        return fileName + ".clean";
-    }
+    std::cout << "\n" << "\n" << "New text:" << "\n";
+    std::cout << text << "\n";
 
-    return fileName.substr(0, position) + ".clean";
-}
-
-bool is_empty_line(std::string line)
-{
-    return (line == "\n");
-}
-
-std::string clean_line(std::string line)
-{
-    std::string::find_first_of(line, "  ")
-
-    for (int i = 0; i < line.length(); i++)
-    {
-        /* code */
-    }
+    std::ofstream NewFile(fileName);
+    NewFile << text;
+    NewFile.close();
     
+    return "";
 }
 
 int main()
 {
     std::string fileName = GetFileName();
-    FindFile();
-    FormatText();
+    std::ifstream file = GetFile(fileName);
+
+    if(!file)
+    {
+        std::cout << "No file found" << std::endl;
+        return 1;
+    }
+
     std::string newFileName = GetNewFileName(fileName);
-    CreateTheNewFile(newFileName);
+    std::string formatedText = FormatText(file);
+    CreateANewFile(newFileName, formatedText);
+    
+    return 0;
 }
