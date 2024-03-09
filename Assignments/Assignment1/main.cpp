@@ -22,12 +22,11 @@ std::ifstream GetFile(std::string fileName)
 
 bool is_empty_line(std::string line)
 {
-    for (int i = 0; i < line.length(); i++)
+    std::istringstream iss{ line };
+    std::string word;
+    while (iss >> word)
     {
-        if (!(line[i] == ' ' ||  line[i] == NULL ||  line[i] == '\n'))
-        {
-            return false;
-        }
+        return false;
     }
     
     return true;
@@ -61,15 +60,9 @@ std::string FormatText(std::ifstream & text)
         {
             if (!is_empty_line(line)) 
             {
-                if (formatedText != "")
-                {
-                    formatedText += "\n";
-                }
 
-                formatedText += clean_line(line);
+                formatedText += clean_line(line) + "\n";
             }
-
-            std::cout << line << "\n";
         }
 
         text.close();
@@ -105,7 +98,7 @@ std::string CreateANewFile(std::string fileName, std::string text)
 int main()
 {
     std::string fileName = GetFileName();
-    std::ifstream file = GetFile(fileName);
+    std::ifstream file{"spacy.txt"};   // = GetFile(fileName);
 
     if(!file)
     {
