@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/Assignment4.dir/main.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment4/main.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/main.cpp",
+  "output": "CMakeFiles/Assignment4.dir/main.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/Assignment4.dir/options.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment4/options.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/options.cpp",
+  "output": "CMakeFiles/Assignment4.dir/options.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/Assignment4.dir/fileCounts.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment4/fileCounts.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/fileCounts.cpp",
+  "output": "CMakeFiles/Assignment4.dir/fileCounts.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/Assignment4.dir/counter.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment4/counter.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment4/counter.cpp",
+  "output": "CMakeFiles/Assignment4.dir/counter.cpp.o"
+}
+]

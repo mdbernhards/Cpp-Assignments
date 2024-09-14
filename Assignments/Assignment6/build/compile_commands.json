@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment6/build",
+  "command": "/usr/bin/g++   -g -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -o CMakeFiles/Assignment6.dir/main.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment6/main.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment6/main.cpp",
+  "output": "CMakeFiles/Assignment6.dir/main.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment6/build",
+  "command": "/usr/bin/g++   -g -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -o CMakeFiles/Assignment6.dir/String.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment6/String.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment6/String.cpp",
+  "output": "CMakeFiles/Assignment6.dir/String.cpp.o"
+}
+]

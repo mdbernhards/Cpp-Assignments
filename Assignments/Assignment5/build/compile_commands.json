@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment5/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/Assignment5.dir/main.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment5/main.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment5/main.cpp",
+  "output": "CMakeFiles/Assignment5.dir/main.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment5/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/Assignment5.dir/outputFile.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment5/outputFile.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment5/outputFile.cpp",
+  "output": "CMakeFiles/Assignment5.dir/outputFile.cpp.o"
+}
+]

@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/build/task_1_2",
+  "command": "/usr/bin/g++   -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/task_1_2.dir/task_1_2.cpp.o -c /mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_1_2/task_1_2.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_1_2/task_1_2.cpp",
+  "output": "task_1_2/CMakeFiles/task_1_2.dir/task_1_2.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/build/task_1_2",
+  "command": "/usr/bin/g++   -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/task_1_2.dir/Options.cpp.o -c /mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_1_2/Options.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_1_2/Options.cpp",
+  "output": "task_1_2/CMakeFiles/task_1_2.dir/Options.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/build/task_1_2",
+  "command": "/usr/bin/g++   -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/task_1_2.dir/NumberFinder.cpp.o -c /mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_1_2/NumberFinder.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_1_2/NumberFinder.cpp",
+  "output": "task_1_2/CMakeFiles/task_1_2.dir/NumberFinder.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/build/task_3",
+  "command": "/usr/bin/g++   -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/task_3.dir/task_3.cpp.o -c /mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_3/task_3.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_3/task_3.cpp",
+  "output": "task_3/CMakeFiles/task_3.dir/task_3.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/build/task_3",
+  "command": "/usr/bin/g++   -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/task_3.dir/IntVector.cpp.o -c /mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_3/IntVector.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Exam/example_exam_2024/task_3/IntVector.cpp",
+  "output": "task_3/CMakeFiles/task_3.dir/IntVector.cpp.o"
+}
+]

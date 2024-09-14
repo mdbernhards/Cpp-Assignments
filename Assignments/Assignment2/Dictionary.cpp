@@ -4,7 +4,6 @@
 
 #include "Dictionary.h"
 
-
 void Dictionary::add(std::string key, std::string value)
 {
     bool containsKey = false;

@@ -18,10 +18,11 @@ std::string TextRedactor::redact_replacements(std::string text) const
     {
         auto key = replacements_.key(i);
         auto pos = text.find(key);
+        auto replacement = replacements_.get(key);
         while (pos != std::string::npos)
         {
-            text.replace(replacements_.get(key), pos);
-            text[pos] = replacements_.get(key);
+            text.replace(pos, key.length(), replacement);
+            pos = text.find(key);
         }
     }
     return text;
@@ -46,7 +47,7 @@ bool TextRedactor::read_replacements(std::string file_name)
         while (getline(file, line))
         {
             index = line.find_first_of('|');
-            replacements_.add(line.substr(0, index-1),line.substr(index+1, line.length()));
+            replacements_.add(line.substr(0, index-1),line.substr(index+2, line.length()));
         }
 
         file.close();
@@ -55,21 +56,90 @@ bool TextRedactor::read_replacements(std::string file_name)
     return true;
 }
 
-// (optional) redacts dates
+std::string redact_specific_date_format(std::string text, std::string format)
+{
+    auto pos = text.find(format);
+    while (pos != std::string::npos)
+    {
+        text.replace(pos, format.length(), "DATE_HERE");
+        pos = text.find(format);
+    }
+
+    return text;
+}
+
 std::string TextRedactor::redact_dates(std::string text) const
 {
+    int startPos = -1, dateLenght = 0;
 
+    for (int i = 0; i < text.length(); ++i)
+    {
+        if (isdigit(text[i]) || ((text[i] == '/' || text[i] == '-') && startPos != -1))
+        {
+            if (startPos == -1)
+            {
+                startPos = i;
+            }
+
+            dateLenght++;
+        } 
+        else
+        {
+            if (dateLenght == 8 || dateLenght == 10)
+            {
+                if(((text[startPos+4] == text[startPos+7]) && (text[startPos+4] == '-' || text[startPos+4] == '/')) || 
+                   ((text[startPos+2] == text[startPos+5]) && (text[startPos+2] == '-' || text[startPos+2] == '/')))
+                {
+                    text.replace(startPos, dateLenght, "DATE_HERE");
+                }
+            }
+            
+            startPos = -1;
+            dateLenght = 0; 
+        }
+    }
+
+    return text;
 }
 
 // redacts numbers
 std::string TextRedactor::redact_numbers(std::string text) const
 {
-    for (int i = 0; i < text.length(); ++i) {
-        if(isdigit(text[i]))
-        {
-            text[i] = 'X';
+    double number;
+    while (!(iss.eof())) {
+        iss >> number;
+        if (!iss.fail()) {
+            // go it
+        } else {
+            //iss.clear();
+            std::string word;
+            iss >> word;
         }
 
     }
+
+
+    int startPos = -1, numberLenght = 0;
+
+    for (int i = 0; i < text.length(); ++i)
+    {
+        if (isdigit(text[i]) || (text[i] == '.' && startPos != -1))
+        {
+            if (startPos == -1)
+            {
+                startPos = i;
+            }
+
+            numberLenght++;
+        }
+        else if (startPos != -1)
+        {
+            text.replace(startPos, numberLenght, "XXX");
+            startPos = -1;
+            numberLenght = 0;
+        }
+
+    }
+
     return text;
 }

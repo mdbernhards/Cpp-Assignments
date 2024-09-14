@@ -1,0 +1,6 @@
+# ninja log v5
+3	201	7314392255251173	build.ninja	ffc443f318bf556e
+13	676	7314360616455376	CMakeFiles/Assignment2.dir/Dictionary.cpp.obj	8648d1b0ac496ccb
+571	701	7314380545156862	Assignment2.exe	86f6d334746410d3
+3	607	7314372322769769	CMakeFiles/Assignment2.dir/main.cpp.obj	436bc03d39b59c66
+6	571	7314380543913398	CMakeFiles/Assignment2.dir/TextRedactor.cpp.obj	cd9bdc4459fe3a86

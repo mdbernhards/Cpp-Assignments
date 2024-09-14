@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment7/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -o CMakeFiles/Assignment7.dir/main.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment7/main.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment7/main.cpp",
+  "output": "CMakeFiles/Assignment7.dir/main.cpp.o"
+},
+{
+  "directory": "/mnt/c/Cpp-Assignments/Assignments/Assignment7/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -o CMakeFiles/Assignment7.dir/Rational.cpp.o -c /mnt/c/Cpp-Assignments/Assignments/Assignment7/Rational.cpp",
+  "file": "/mnt/c/Cpp-Assignments/Assignments/Assignment7/Rational.cpp",
+  "output": "CMakeFiles/Assignment7.dir/Rational.cpp.o"
+}
+]

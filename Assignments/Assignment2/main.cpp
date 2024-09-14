@@ -12,17 +12,19 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
+    //std::string  text = "smelly.txt";
+    //std::string  replacements = "smelly_replacements.txt";
+    std::string  text = argv[1];
+    std::string  replacements = argv[2];
+    
     TextRedactor tr{};
-    std::string  bbb= argv[0];
-    std::string  ddc = argv[1];
-    std::string  ddd= argv[2];
-    if (!tr.read_replacements(argv[2]))
+    if (!tr.read_replacements(replacements))
     {
-        std::cerr << "Error reading replacements from " << argv[2] << '\n';
+        std::cerr << "Error reading replacements from " << replacements << '\n';
         return EXIT_FAILURE;
     }
 
-    if (std::ifstream file{argv[1]})
+    if (std::ifstream file{text})
     {
         std::stringstream ss;
         ss << file.rdbuf();
